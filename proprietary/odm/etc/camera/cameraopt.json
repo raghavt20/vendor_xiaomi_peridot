@@ -1,0 +1,8 @@
+{
+    "version": "1.0",
+    "CameraBooster": {
+        "threshold": {
+            "free_memory_threshold": 1500000
+        }
+    }
+}

@@ -1,0 +1,61 @@
+{
+    "strategy": {
+        "supported_strategy_index": [
+            2
+        ]
+    },
+
+    "LowSoh-FvDown": {
+        "enable_by_default": true,
+        "use_smart_fv": true,
+        "sysfs_node": {
+            "cyclecount": {
+                "path": "/sys/class/qcom-battery/fake_cycle",
+                "range_min": 200,
+                "range_max": 800
+            },
+            "soh": {
+                "path": "/sys/class/qcom-battery/soh",
+                "threshold": 85
+            },
+            "smart_batt": {
+                "path": "/sys/class/qcom-battery/smart_batt",
+                "value": 30
+            },
+            "smart_fv": {
+                "path": "/sys/class/qcom-battery/smart_fv",
+                "value": 40
+            }
+        }
+    },
+
+    "FreqChg-FvDown": {
+        "enable_by_default": true,
+        "use_smart_fv": true,
+        "number_of_period_to_take_effect": 3,
+        "threshold": {
+            "heavy_use": {
+                "soc_entry": 180,
+                "soc_exit": 140
+            },
+            "high_soc_use": {
+                "start_soc": 70,
+                "delta_soc": 20,
+                "cnt_one_day": 3
+            }
+        },
+        "sysfs_node": {
+            "soc": {
+                "path": "/sys/class/power_supply/battery/capacity"
+            },
+            "smart_batt": {
+                "path": "/sys/class/qcom-battery/smart_batt",
+                "value": 30
+            },
+            "smart_fv": {
+                "path": "/sys/class/qcom-battery/smart_fv",
+                "value": 30
+            }
+        }
+    }
+}

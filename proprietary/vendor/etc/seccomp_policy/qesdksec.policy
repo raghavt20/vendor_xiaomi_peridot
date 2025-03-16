@@ -58,6 +58,7 @@ ioctl: 1
 recvfrom: 1
 nanosleep: 1
 getsockopt: 1
+gettid: 1
 
 # added for netlink
 setsockopt: 1
@@ -70,5 +71,3 @@ getgid: 1
 
 #added for set thread pool
 setpriority: 1
-
-gettid: 1
